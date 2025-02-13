@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/monedasFragment">
+    <fragment
+        android:id="@+id/monedasFragment"
+        android:name="dam.moviles.ejerapi1.vista.MonedasFragment"
+        android:label="fragment_monedas"
+        tools:layout="@layout/fragment_monedas" >
+        <action
+            android:id="@+id/action_monedasFragment_to_resultadoFragment2"
+            app:destination="@id/resultadoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultadoFragment"
+        android:name="dam.moviles.ejerapi1.vista.ResultadoFragment"
+        android:label="fragment_resultado"
+        tools:layout="@layout/fragment_resultado" >
+        <argument
+            android:name="cantidad"
+            app:argType="float" />
+        <argument
+            android:name="divisa"
+            app:argType="string" />
+    </fragment>
+</navigation>
