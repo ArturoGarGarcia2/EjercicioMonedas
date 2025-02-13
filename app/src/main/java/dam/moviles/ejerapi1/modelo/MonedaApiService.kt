@@ -1,6 +1,5 @@
 package dam.moviles.ejerapi1.modelo
 
-import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Query
 

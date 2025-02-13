@@ -12,8 +12,9 @@ class MonedasFragmentViewModel: ViewModel() {
         lambdaError: (String)-> Unit
     ){
         try{
-            listaMonedas = MonedaRepository().getMonedas().map { m ->
-                Moneda(m.key,m.value)
+            listaMonedas = MonedaRepository().getMonedas()
+                .filter{ m -> m.key!="EUR" }
+                .map { m -> Moneda(m.key,m.value)
             }
             lambdaExito()
         }catch (e:Exception){
